@@ -28,10 +28,6 @@ O site tem como objetivo divulgar o trabalho artesanal da Isa e facilitar o cont
 
 ---
 
-## 📷 Imagens
-
-\*(./src/assets/design.png)
-
 ---
 
 <!-- ## 🔗 Acesse o site
