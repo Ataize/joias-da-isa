@@ -25,8 +25,11 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  background-color: var(--branco-suave);
+  gap: 1.5rem;
+}
+.products-container > * {
+  flex: 1 1 calc(33.333% - 1rem); /* 3 por linha no desktop */
+  max-width: calc(33.333% - 1rem);
 }
 .product-card {
   background-color: var(--branco-suave);
@@ -107,4 +110,19 @@ h3 {
 .whatsapp-button:hover {
   background-color: #d88a8a;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Responsivo: 2 por linha no tablet */
+@media (max-width: 1024px) {
+  .products-container > * {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+/* 1 por linha no celular */
+@media (max-width: 640px) {
+  .products-container > * {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
