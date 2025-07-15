@@ -1,0 +1,110 @@
+:root {
+  --marrom: #8b5e3c;
+  --bege-fundo: #fdf8f5;
+  --rosa-cta: #e9a8a3;
+  --branco-suave: #ffffff;
+}
+body {
+  background-color: var(--bege-fundo);
+  font-family: "Quicksand", sans-serif;
+  color: var(--marrom);
+}
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+.header {
+  font-size: 2rem;
+  color: var(--marrom);
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--branco-suave);
+}
+.product-card {
+  background-color: var(--branco-suave);
+  border: 1px solid var(--marrom);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  width: 300px;
+}
+.product-card:hover {
+  box-shadow: 0 5px 10px var(--marrom);
+  cursor: pointer;
+  border: 2px solid var(--rosa-cta);
+}
+.ativo {
+  transform: scale(1.03);
+  transition: all 0.2s ease;
+  background-color: var(--rosa-cta);
+}
+
+.product-image {
+  width: 250px;
+  height: 200px;
+  border-radius: 5px;
+}
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.product-price {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.product-description {
+  font-size: 0.9rem;
+  color: var(--marrom);
+  margin-bottom: 0.5rem;
+}
+.about-section {
+  background-color: var(--branco-suave);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-text {
+  align-self: center;
+  margin: 0 2rem;
+}
+.about-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--marrom);
+}
+.whatsapp-button {
+  background-color: var(--rosa-cta);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 40%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 1rem auto;
+}
+.whatsapp-button:hover {
+  background-color: #d88a8a;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
