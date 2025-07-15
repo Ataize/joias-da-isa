@@ -28,12 +28,9 @@ O site tem como objetivo divulgar o trabalho artesanal da Isa e facilitar o cont
 
 ---
 
----
+## 🔗 Acesse o site
 
-<!-- ## 🔗 Acesse o site
-
-[https://joias-da-isa.vercel.app](https://joias-da-isa.vercel.app)
-*(substitua pelo link real depois do deploy)*
+[https://joias-da-isa.vercel.app](https://joias-da-isa-rj8g.vercel.app/)
 
 ---
 
@@ -42,4 +39,5 @@ O site tem como objetivo divulgar o trabalho artesanal da Isa e facilitar o cont
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU-USUARIO/joias-da-isa.git -->
+git clone https://github.com/SEU-USUARIO/joias-da-isa.git
+```
