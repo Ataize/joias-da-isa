@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+// import "./App.css";
 import About from "./components/About";
 import { Header } from "./components/Header";
 import ProductCard from "./components/ProductCard";
@@ -64,7 +64,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="gallery">
+      <div className="gallery-grid">
         {products.map((product) => (
           <ProductCard
             key={product.id}

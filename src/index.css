@@ -8,6 +8,7 @@ body {
   background-color: var(--bege-fundo);
   font-family: "Quicksand", sans-serif;
   color: var(--marrom);
+  box-sizing: border-box;
 }
 h1,
 h2,
@@ -15,34 +16,31 @@ h3 {
   font-family: "Playfair Display", serif;
 }
 .header {
-  font-size: 2rem;
   color: var(--marrom);
   text-align: center;
   margin-top: 1rem;
   font-size: 1.5rem;
 }
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 16px;
 }
-.products-container > * {
-  flex: 1 1 calc(33.333% - 1rem); /* 3 por linha no desktop */
-  max-width: calc(33.333% - 1rem);
-}
+
 .product-card {
   background-color: var(--branco-suave);
   border: 1px solid var(--marrom);
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 .product-card:hover {
-  box-shadow: 0 5px 10px var(--marrom);
-  cursor: pointer;
-  border: 2px solid var(--rosa-cta);
+  transform: translateY(-4px);
 }
 .ativo {
   transform: scale(1.03);
@@ -51,19 +49,29 @@ h3 {
 }
 
 .product-image {
-  width: 250px;
+  width: 100%;
   height: 200px;
-  border-radius: 5px;
+  object-fit: cover;
+  display: block;
+}
+.product-info {
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .product-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
 }
 .product-price {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
   font-weight: bold;
+  margin: 0;
+  color: var(--marrom);
 }
 .product-description {
   font-size: 0.9rem;
@@ -95,9 +103,9 @@ h3 {
 .whatsapp-button {
   background-color: var(--rosa-cta);
   color: white;
-  border: none;
+  border: transparent;
   border-radius: 5px;
-  width: 40%;
+  width: 300px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -111,18 +119,14 @@ h3 {
   background-color: #d88a8a;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-/* Responsivo: 2 por linha no tablet */
-@media (max-width: 1024px) {
-  .products-container > * {
-    flex: 1 1 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet */
   }
 }
 
-/* 1 por linha no celular */
-@media (max-width: 640px) {
-  .products-container > * {
-    flex: 1 1 100%;
-    max-width: 100%;
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr); /* desktop */
   }
 }
