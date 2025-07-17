@@ -1,18 +1,13 @@
+import type { Product } from "../Types/Product";
+
 type ProductCardProps = {
-  name: string;
-  price: number;
-  image: string;
+  product: Product;
   onSelect?: () => void;
   active: boolean;
 };
 
-const ProductCard = ({
-  name,
-  price,
-  image,
-  onSelect,
-  active,
-}: ProductCardProps) => {
+const ProductCard = ({ product, onSelect, active }: ProductCardProps) => {
+  const { name, price, image } = product;
   return (
     <div className={`product-card ${active ? "ativo" : ""}`} onClick={onSelect}>
       <img src={image} alt={name} className="product-image" />
